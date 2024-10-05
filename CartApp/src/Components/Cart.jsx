@@ -12,11 +12,11 @@ function Cart() {
     <div className="App">
       <h2>Your Cart</h2>
       <p>Total Items:{totalQuantity}</p>
-      <p>Total Price: {totalPrice}</p>
+      <p>Total Price:Rs {totalPrice}</p>
       <ul>
         {cartItems.map((item) => (
           <li key={item.id}>
-            {item.title} - {item.quantity} x Rs{item.price} = ${item.totalPrice}
+            {item.title} - {item.quantity} x Rs{item.price} = Rs{item.totalPrice}
             <button onClick={() => dispatch(removeItemFromCart(item.id))}>
               Remove
             </button>
